@@ -6,9 +6,9 @@ pipeline {
             string(name: 'SPEC', defaultValue: 'cypress/integration/**/**', description: 'Enter the script path that you want to execute')
             choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'choose the browser where you want to execute your script')
         }
-        options{
-            ansiColor('xterm')
-        }
+        // options{
+        //     ansiColor('xterm')
+        // }
 
     stages {
         stage('Dependencies') {
