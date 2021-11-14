@@ -29,7 +29,8 @@ pipeline {
         stage('e2e Tests') {
             steps {
                 // bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
-                bat 'npm run ci:e2e --browser ${BROWSER} --spec ${SPEC}'
+                bat 'npm run start'
+                bat 'npm run cypress:run --browser ${BROWSER} --spec ${SPEC}'
             }
         }
         stage('Deploy') {
