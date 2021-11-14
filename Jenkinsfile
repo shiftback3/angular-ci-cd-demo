@@ -30,7 +30,7 @@ pipeline {
             steps {
                 // bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
                 bat 'npm run start'
-                bat 'npm run cypress:run --browser ${BROWSER} --spec ${SPEC}'
+                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
             }
         }
         stage('Deploy') {
