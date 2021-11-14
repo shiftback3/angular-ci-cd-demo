@@ -21,28 +21,19 @@ pipeline {
                 bat 'npm run build'
             }
         }
-        // stage('Unit Tests') {
-        //     steps {
-        //         bat 'npm run test'
-        //     }
-        // }
         stage('Unit Tests') {
             steps {
-                echo 'Unit Test Successfull'
+                bat 'npm run tes'
             }
         }
-        // stage('e2e Tests') {
-        //     steps {
-        //         // bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
-        //         bat 'npm run start'
-        //         bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
-        //     }
-        // }
         stage('e2e Tests') {
             steps {
-                echo 'End to End Testing successfull'
+                // bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
+                bat 'npm run start'
+                bat 'npx cypress run --browser ${BROWSER} --spec ${SPEC}'
             }
         }
+        
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
