@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Unit Tests') {
             steps {
-                bat 'npm run tes'
+                bat 'npm run test'
             }
         }
         stage('e2e Tests') {
